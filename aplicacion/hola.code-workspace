@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "name": "Root Folder"
+        },
+        {
+            "path": "subfolder",
+            "name": "Subfolder"
+        },
+        {
+            "path": "docs",
+            "name": "Documentation",
+            "description": "Folder containing project documentation"
+        }
+    ]
+}

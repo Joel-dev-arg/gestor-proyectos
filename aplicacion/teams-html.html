@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Equipos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestión de Equipos</h1>
+            <button id="back-button" onclick="window.location.href='ppo.html'">Volver a la gestión</button>
+        </header>
+
+        <main>
+            <div class="add-team-section">
+                <h2>Agregar Nuevo Equipo</h2>
+                <form id="add-team-form">
+                    <div class="form-group">
+                        <label for="team-name">Nombre del Equipo:</label>
+                        <input type="text" id="team-name" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="team-members">Integrantes (separados por coma):</label>
+                        <textarea id="team-members" name="integrantes" required></textarea>
+                    </div>
+                    <button id="add-button" type="submit">Agregar Equipo</button>
+                </form>
+            </div>
+
+            <div class="teams-list-section">
+                <h2>Lista de Equipos</h2>
+                <div id="teams-container"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para editar equipo -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Equipo</h2>
+            <form id="edit-team-form">
+                <input type="hidden" id="edit-team-id">
+                <div class="form-group">
+                    <label for="edit-team-name">Nombre del Equipo:</label>
+                    <input type="text" id="edit-team-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-team-members">Integrantes:</label>
+                    <textarea id="edit-team-members" required></textarea>
+                </div>
+                <button id="add-button" type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="teams-js.js"></script>
+</body>
+</html>

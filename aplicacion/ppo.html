@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Proyectos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Proyectos</h1>
+        <div class="user-section">
+            <span id="user-name"></span>
+            <div class="header-buttons">
+                <button class="header-button" onclick="location.href='add_project.html'">Agregar Proyecto</button>
+                <button class="header-button2" onclick="window.location.href='teams-html.html'">Gestionar Equipos</button>
+                <button class="header-button" id="logout-button" onclick="logout()">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-container">
+        <main>
+            <section id="project-management">
+                <div class="project-header">
+                    <h2>Lista de proyectos</h2>
+                    <div class="filter-section">
+                        <label for="filter-status">Filtrar por estado:</label>
+                        <select id="filter-status">
+                            <option value="all">Todos</option>
+                            <option value="iniciado">Iniciado</option>
+                            <option value="en-proceso">En Proceso</option>
+                            <option value="finalizado">Finalizado</option>
+                        </select>
+                        <button id="filter-button">Filtrar</button>
+                    </div>
+                </div>
+
+                <div class="project-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Total de proyectos:</span>
+                        <span id="total-projects" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Iniciados:</span>
+                        <span id="iniciado-projects" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">En proceso:</span>
+                        <span id="en-proceso-projects" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Finalizados:</span>
+                        <span id="finalizado-projects" class="stat-value">0</span>
+                    </div>
+                </div>
+
+                <div id="project-list" class="accordion-container"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
